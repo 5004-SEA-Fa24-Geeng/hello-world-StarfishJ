@@ -1,9 +1,5 @@
 # Markdown Playground
 
-Use this file to add example markdown elements you learned about by reading the markdown resources below. You need to add at least 3 different markdown elements you learned about, and a mermaid class diagram (of your choice does not have to follow the assignment. However, if you did use mermaid for the assignment, you can just copy that here). 
-
-Mermaid is a markdown language that allows you to create diagrams. You can find more information about mermaid in the resources below. It has become popular enough that github has included it as an option in their markdown.  For built in markdown readers, such as the one built into IntelliJ or VSCode, you may need to install a plugin to render the mermaid diagrams. 
-
 > [!NOTE]
 > [IntelliJ Mermaid Plugin](https://plugins.jetbrains.com/plugin/20146-mermaid). Also for intelliJ, this is often installed by default, but incase it isn't [Markdown Plugin IntelliJ](https://plugins.jetbrains.com/plugin/7793-markdown). 
 
@@ -21,3 +17,46 @@ Mermaid is a markdown language that allows you to create diagrams. You can find 
 
 <!-- start your playground code under this dashed line -->
 ----
+3 different markdown elements I learned
+   * `-->`:  indicating the source and destination of the relationship, showing which class uses or references the other
+   * `(```Triple Backticks)`: used in Markdown to create code blocks
+   * `direction LR`: set the direction of the diagram’s layout. Arranges elements from right to left.
+
+
+```mermaid
+---
+title: Aloha World UML
+---
+classDiagram
+    direction LR
+    AlohaWorld --> Greeter 
+    AlohaWorld --> ConsoleView : uses
+    ConsoleView --> Greeter : uses
+    class AlohaWorld {
+        + main(String[] args): void
+
+    }
+    class Greeter {
+        - locality : int
+        - localityList : List<String>
+        + Greeter(String name)
+        + Greeter(String name, int locality)
+        + getName(): String
+        + getLocality() : int
+        + setLocality(int locality) : void
+        + greet() : String
+        + greet(boolean asciiOnly) : String
+        - getLocalityString() : String
+        + hashCode() : int
+        + equals(Object obj) : boolean
+        + toString() : String
+        + getLocalityList() :  List<String>
+    }
+
+    class ConsoleView {
+        + getName() : String
+        + getLocality() : int
+        + checkRunAgain() : boolean
+        + printGreeting(Srtring greeting) : void
+    }
+```
