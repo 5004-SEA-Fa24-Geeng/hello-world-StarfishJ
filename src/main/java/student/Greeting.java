@@ -10,13 +10,13 @@ public class Greeting {
     private String localityName;
     /** holds the int value of localityID.  */
     private int localityID;
-    /** holds the Ascii greeting */
+    /** holds the Ascii greeting. */
     private String asciiGreeting;
-    /** holds the Unicode greeting */
+    /** holds the Unicode greeting. */
     private String unicodeGreeting;
-    /** holds the format string */
+    /** holds the format string. */
     private String formatStr;
-    /** holds the special case for locality name "China" */
+    /** holds the special case for locality name "China". */
     private final String edgeCase = "China";
 
     /**
@@ -29,24 +29,26 @@ public class Greeting {
     }
 
     /**
-     * Greeting that creates a greeting with ascii and unicode characters assuming the language is already using ascii letters only.
+     * Greeting that creates a greeting with ascii and Unicode characters.
+     * Assume the language is already using ascii letters only.
      * @param localityID      id of the locality
      * @param localityName    name of the locality
-     * @param Greeting   greeting using ascii characters
+     * @param greeting   greeting using ascii characters
      */
-    public Greeting(int localityID, String localityName, String Greeting) {
-        this(localityID, localityName, Greeting, Greeting, "%s, %%s!");
+    public Greeting(int localityID, String localityName, String greeting) {
+        this(localityID, localityName, greeting, greeting, "%s, %%s!");
     }
 
     /**
-     * Greeting that creates a greeting with ascii and unicode characters.
+     * Greeting that creates a greeting with ascii and Unicode characters.
      * @param localityID      id of the locality
      * @param localityName    name of the locality
      * @param asciiGreeting   greeting using ascii characters
-     * @param unicodeGreeting greeting using unicode characters
+     * @param unicodeGreeting greeting using Unicode characters
      * @param formatStr       format string for the greeting
      */
-    public Greeting(int localityID, String localityName, String asciiGreeting, String unicodeGreeting, String formatStr) {
+    public Greeting(int localityID, String localityName, String asciiGreeting,
+                    String unicodeGreeting, String formatStr) {
         this.localityID = localityID;
         this.localityName = localityName;
         this.asciiGreeting = asciiGreeting;
@@ -55,7 +57,7 @@ public class Greeting {
     }
 
     /**
-     * return the localityID
+     * return the localityID.
      * @return the localityID
      */
     public int getLocalityID() {
@@ -63,7 +65,7 @@ public class Greeting {
     }
 
     /**
-     * return the locality Name
+     * return the locality Name.
      * @return the locality Name
      */
     public String getLocalityName() {
@@ -71,7 +73,7 @@ public class Greeting {
     }
 
     /**
-     * return the Greeting in Ascii code format
+     * return the Greeting in Ascii code format.
      * @return the Ascii format Greeting
      */
     public String getAsciiGreeting() {
@@ -79,39 +81,39 @@ public class Greeting {
     }
 
     /**
-     * return the Greeting in unicode format
-     * @return the unicode format Greeting
+     * return the Greeting in Unicode format.
+     * @return the Unicode format Greeting
      */
     public String getUnicodeGreeting() {
         return unicodeGreeting;
     }
 
     /**
-     * return format string with greeting string inserted based in locality name
+     * return format string with greeting string inserted based in locality name.
      * @return format String
      */
     public String getFormatStr() {
-        if (localityName.equals(edgeCase)) { // Edge case when locality name is China, the format should be special
-            return String.format("%%s, %s!",unicodeGreeting);
+        if (localityName.equals(edgeCase)) { // Edge case when locality name is China, the format should be special.
+            return String.format("%%s, %s!", unicodeGreeting);
         }
         return String.format(formatStr, unicodeGreeting, "%s");
     }
 
     /**
-     * return format string with greeting string inserted based on locality name and has ascii requirement or not
+     * return format string with greeting string based on locality name and has ascii requirement or not.
      * @param asciiOnly require whether the greeting in ascii or not
      * @return format string with greeting string inserted
      */
     public String getFormatStr(boolean asciiOnly) {
         if (localityName.equals(edgeCase)) { // Edge case when locality name is China, the format should be special
             String greeting = asciiOnly ? asciiGreeting : unicodeGreeting;
-            return String.format("%%s, %s!",greeting);
+            return String.format("%%s, %s!", greeting);
         }
         return String.format(formatStr, asciiOnly ? asciiGreeting : unicodeGreeting, "%s");
     }
 
     /**
-     * generate a greeting string
+     * generate a greeting string.
      * @return a format string contains localityID, localityName, asciiGreeting, unicodeGreeting
      */
     public String toString() {
