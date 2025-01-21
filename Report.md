@@ -24,7 +24,7 @@ The program starts in main() in AlohaWorld which then asks the client for their 
 
     * Use the `static` variable for the property that is common to all objects. Which means a method or variable belongs to the class itself rather than to instances of the class.[^1]
     * The `final` keyword when used on a class prevents the class from being subclassed. This means that the class cannot be extended by another class. This is useful when you want to prevent a class from being modified or extended.[^2]
-    * The `Override` keyword when a subclass implements a method which is already defined in the superclass or Base Class. It allows the subclass to modify the inherited methods.
+    * The `Override` keyword when a subclass implements a method which is already defined in the superclass or Base Class. It allows the subclass to modify the inherited methods.[^3]
 
 3. What does `main` do in Java? 
 
