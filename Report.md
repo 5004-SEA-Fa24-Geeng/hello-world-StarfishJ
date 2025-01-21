@@ -56,11 +56,10 @@ By limiting client interaction in ConsoleView, we adhere to the principle of sep
 
 2. Right now, the application isn't very dynamic in that it can be difficult to add new languages and greetings without modifying the code every time. Just thinking programmatically,  how could you make the application more dynamic? You are free to reference Geeting.java and how that could be used in your design.
 
-
+We could use a Map to hold the languages and greetings, like in Greeting.java we have some edge cases when the locality name is "China", and other languages are same in the sequence of the format. We can put languages with the same format in the same group (possibly in a separate external file) and program based on the map, so that everytime we add in a new language, we don't have to touch the program.
 
 > [!IMPORTANT]
 >  After you upload the files to your github (ideally you have been committing throughout this progress / after you answer every question) - make sure to look at your completed assignment on github/in the browser! You can make sure images are showing up/formatting is correct, etc. The TAs will actually look at your assignment on github, so it is important that it is formatted correctly.
-
 
 ## References
 
@@ -69,7 +68,6 @@ By limiting client interaction in ConsoleView, we adhere to the principle of sep
 [^2]: Final keyword in Java. https://www.geeksforgeeks.org/final-keyword-in-java/. Accessed: 2025-01-15. 
 
 [^3]: Overriding in Java. https://www.geeksforgeeks.org/overriding-in-java/. Accessed: 2025-01-16
-
 
 <!-- This is a comment, below this link the links in the document are placed here to make ti easier to read. This is an optional style for markdown, and often as a student you will include the links inline. for example [mermaid](https://mermaid.js.org/intro/syntax-reference.html) -->
 [mermaid]: https://mermaid.js.org/intro/syntax-reference.html
