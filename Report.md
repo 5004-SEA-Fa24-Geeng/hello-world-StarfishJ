@@ -63,11 +63,9 @@ We could use a Map to hold the languages and greetings, like in Greeting.java we
 
 ## References
 
-[^1]: static Keyword in Java. https://www.geeksforgeeks.org/static-keyword-java/. Accessed: 2025-01-15. 
-
-[^2]: Final keyword in Java. https://www.geeksforgeeks.org/final-keyword-in-java/. Accessed: 2025-01-15. 
-
-[^3]: Overriding in Java. https://www.geeksforgeeks.org/overriding-in-java/. Accessed: 2025-01-16
+[^1]: static Keyword in Java. https://www.geeksforgeeks.org/static-keyword-java/. Accessed: 2025-01-15.
+[^2]: Final keyword in Java. https://www.geeksforgeeks.org/final-keyword-in-java/. Accessed: 2025-01-15.
+[^3]: Overriding in Java. https://www.geeksforgeeks.org/overriding-in-java/. Accessed: 2025-01-16.
 
 <!-- This is a comment, below this link the links in the document are placed here to make ti easier to read. This is an optional style for markdown, and often as a student you will include the links inline. for example [mermaid](https://mermaid.js.org/intro/syntax-reference.html) -->
 [mermaid]: https://mermaid.js.org/intro/syntax-reference.html
