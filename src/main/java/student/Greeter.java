@@ -8,12 +8,10 @@ import java.util.List;
 
 /**
  * Greeter holds the name of the person, and the locality of greeting to be used.
- *
  * <p>
  * The greeter class is meant to be a simple class that acts as a container for the information,
  * along with generating the proper greeting.
  * </p>
- *
  */
 public class Greeter {
     /** holds the name of the person. Immutable. */
@@ -39,7 +37,6 @@ public class Greeter {
 
     /**
      * This is the constructor for the Greeter class.
-     *
      * This constructor assumes 2 as the default locality.
      * @param name of the person to greet
      */
@@ -49,7 +46,6 @@ public class Greeter {
 
     /**
      * This is the constructor for the Greeter class.
-     *
      * @param name name of the person to greet
      * @param locality the locality in which to greet them.
      */
@@ -64,11 +60,9 @@ public class Greeter {
 
     /**
      * Returns the name of the greeter.
-     *
      * This is called an "accessor" method. It is a method that
      * returns the value of a private field. It is a good practice
      * to make fields private and use accessors to get the value.
-     *
      * @return the name of the greeter
      */
     public String getName() {
@@ -77,10 +71,8 @@ public class Greeter {
 
     /**
      * Returns the locality of the greeter.
-     *
      * This is called an "accessor" method. It is a method that returns the value of a private
      * field. It is a good practice to make fields private and use accessors to get the value.
-     * 
      * @return the int value of the locality
      */
     public int getLocality() {
@@ -89,12 +81,9 @@ public class Greeter {
 
     /**
      * Used to (re)set the locality of the greeter.
-     *
      * This is called a "mutator" method. It is a method that sets the value of a private field. It
      * is a good practice to make fields private and use mutators to set the value.
-     *
      * Anything that doesn't have a mutator is a 'readonly' field.
-     *
      * @param locality the int value of the locality, if out of range, throws an
      *        IllegalArgumentException
      */
@@ -109,11 +98,9 @@ public class Greeter {
     /**
      * This method is used to greet the user. It will return a greeting based on their set locality.
      * It will use ascii characters for the greeting.
-     *
      * This is called an "overloaded" method. It is a method with the same name as another method,
      * but with different parameters. This helps simplify the code calls, and allows for more
      * flexibility in the code.
-     * 
      * @return the greeting
      * @see #greet(boolean)
      */
@@ -125,13 +112,10 @@ public class Greeter {
      * This method is used to greet the user. It will return a greeting based on their set locality.
      * If the ascii_only flag is set to true, it will only use ascii characters. If it is set to
      * false, it will use the unicode characters for the greeting.
-     *
      * <p>
      * Examples:
      * </p>
-     *
      * <pre>
-     *
      * {@code
      * Greeter greeter = new Greeter("Kailani", 1);
      *
@@ -184,14 +168,13 @@ public class Greeter {
     /**
      * Returns the locality as a string. If the locality is not between 1 and localityList.size() it
      * will return "USA"
-     * 
      * @return the locality as a string
      */
     private String getLocalityString() {
         if (locality < 1 || locality >= localityList.size()) {
             return "USA";
         }
-        return localityList.get(locality-1);
+        return localityList.get(locality - 1);
     }
 
     /**
@@ -202,7 +185,6 @@ public class Greeter {
      * hashcode will be the same.
      *
      * Java assumes that if .equals is true, the hashcodes should also be the same.
-     * 
      * @return the hashcode
      */
     @Override
@@ -261,7 +243,6 @@ public class Greeter {
 
     /**
      * Returns a copy of the locality list.
-     * 
      * @return a copy of the locality list
      */
     public static List<String> getLocalityList() {
