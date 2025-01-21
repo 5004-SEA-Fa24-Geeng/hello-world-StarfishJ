@@ -60,3 +60,43 @@ classDiagram
         + printGreeting(Srtring greeting) : void
     }
 ```
+
+<pre>
+```mermaid
+---
+title: Aloha World UML
+---
+classDiagram
+    direction LR
+    AlohaWorld --> Greeter 
+    AlohaWorld --> ConsoleView : uses
+    ConsoleView --> Greeter : uses
+    class AlohaWorld {
+        + main(String[] args): void
+
+    }
+    class Greeter {
+        - locality : int
+        - localityList : List<String>
+        + Greeter(String name)
+        + Greeter(String name, int locality)
+        + getName(): String
+        + getLocality() : int
+        + setLocality(int locality) : void
+        + greet() : String
+        + greet(boolean asciiOnly) : String
+        - getLocalityString() : String
+        + hashCode() : int
+        + equals(Object obj) : boolean
+        + toString() : String
+        + getLocalityList() :  List<String>
+    }
+
+    class ConsoleView {
+        + getName() : String
+        + getLocality() : int
+        + checkRunAgain() : boolean
+        + printGreeting(Srtring greeting) : void
+    }
+```
+<pre>
