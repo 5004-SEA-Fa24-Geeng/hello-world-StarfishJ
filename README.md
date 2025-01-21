@@ -17,8 +17,9 @@ Did you use any external resources (you do not have to cite in class material)? 
 * how to switch to UTF-8 in windows to avoid wrong language display in gradle https://blog.csdn.net/qq_39553871/article/details/136201398
 
 (Optional) What was your favorite part of the assignment?
-Creating new class Greeting.
+* Creating new class Greeting.
 
 (Optional) How would you improve the assignment?
-I'll continue studying java as I have encountered many questions involved with basic coding skills. 
+* I'll continue studying java as I have encountered many questions involved with basic coding skills.
+
 ---
