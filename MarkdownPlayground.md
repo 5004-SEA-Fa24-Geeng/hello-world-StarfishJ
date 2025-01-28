@@ -57,7 +57,7 @@ classDiagram
         + getName() : String
         + getLocality() : int
         + checkRunAgain() : boolean
-        + printGreeting(Srtring greeting) : void
+        + printGreeting(String greeting) : void
     }
 ```
 

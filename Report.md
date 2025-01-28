@@ -4,9 +4,46 @@ The following report contains questions you need to answer as part of your submi
 
 
 ## Design Doc
+
 Please link your UML design file here. See resources in the assignment on how to
 link an image in markdown. You may also use [mermaid] class diagrams if you prefer, if so, include the mermaid code here.  You DO NOT have to include Greeting.java as part of the diagram, just the AlohaWorld application that includes: [AlohaWorld.java], [Greeter.java], and [ConsoleView.java].
+```mermaid
+---
+title: Aloha World UML
+---
+classDiagram
+    direction LR
+    AlohaWorld --> Greeter
+    AlohaWorld --> ConsoleView : uses
+    ConsoleView --> Greeter : uses
+    class AlohaWorld {
+        + main(String[] args): void
 
+    }
+    class Greeter {
+        - locality : int
+        - localityList : List<String>
+        + Greeter(String name)
+        + Greeter(String name, int locality)
+        + getName(): String
+        + getLocality() : int
+        + setLocality(int locality) : void
+        + greet() : String
+        + greet(boolean asciiOnly) : String
+        - getLocalityString() : String
+        + hashCode() : int
+        + equals(Object obj) : boolean
+        + toString() : String
+        + getLocalityList() :  List<String>
+    }
+
+    class ConsoleView {
+        + getName() : String
+        + getLocality() : int
+        + checkRunAgain() : boolean
+        + printGreeting(String greeting) : void
+    }
+```
 
 ### Program Flow
 The program starts in main() in AlohaWorld which then asks the client for their name and location, then it creates a Greeter object. It then creates an instance of the ConsoleView class to handle user input and output. ConsoleView acts as an intermediary between the user and the Greeter, accessing methods to retrieve names and locations as well as printing greetings. Greeter is about details about the user, such as name and locality, and provides methods to interact with that data.
